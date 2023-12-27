@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
+@Composable//어노테이션
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
@@ -37,10 +37,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true)//미리보
 @Composable
 fun GreetingPreview() {
     ComposableTheme {
-        Greeting("Android")
+        Greeting("김영현!")
+    }
+}
+
+@Preview(showBackground = true)//미리보
+@Composable
+fun GreetingPreview2() {
+    ComposableTheme {
+        Greeting("추민수!")
     }
 }
