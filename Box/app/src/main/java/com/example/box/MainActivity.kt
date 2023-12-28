@@ -25,10 +25,15 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier
                     .background(Color.Gray)
                     .fillMaxSize(),
-                contentAlignment = Alignment.CenterEnd,//글씨정렬 속성
+                contentAlignment = Alignment.Center,//글씨정렬 속성
             ) {
                 Text(text = "Hello")
-                Text(text = "12345~~~~")
+                Box(
+                    Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    Text(text = "12345~~~~")
+                }
             }
         }
     }
