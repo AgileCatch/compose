@@ -7,6 +7,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -24,9 +26,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {//안에있는 내용들이 겹칠 수 있는 성질을가짐
             Box(
-                modifier = Modifier
-                    .background(Color.Gray)
-                    .fillMaxSize(),
+                modifier = Modifier.background(Color.Gray)
+                    .fillMaxWidth()
+                    .height(200.dp),
                 contentAlignment = Alignment.Center,//글씨정렬 속성
             ) {
                 Text(text = "Hello")
