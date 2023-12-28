@@ -49,6 +49,6 @@ fun GreetingPreview() {
 @Composable
 fun GreetingPreview2() {
     ComposableTheme {
-        Greeting("추민수!")
+        Greeting("추민수!")//
     }
 }
