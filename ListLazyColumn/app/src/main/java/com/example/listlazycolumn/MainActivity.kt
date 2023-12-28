@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -31,7 +32,8 @@ class MainActivity : ComponentActivity() {
                 Modifier
                     .background(Color.Green)
                     .fillMaxWidth(),
-                contentPadding = PaddingValues(16.dp)//전체패딩
+                contentPadding = PaddingValues(16.dp),//전체패딩
+                verticalArrangement = Arrangement.spacedBy(8.dp),//item간 간격
             ) {
                 items(50) { index ->
                     Text (text = "글씨 $index")
