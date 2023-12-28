@@ -7,6 +7,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
@@ -22,16 +23,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            //이 안에만 코드작성 가능
-            val scrollState = rememberScrollState() //스크롤동작
-            Column(
+            //rememberScrollState() 를 사용하지 않아도 스크롤이됨
+
+            LazyColumn(
                 Modifier
                     .background(Color.Green)
                     .fillMaxWidth()
-                    .verticalScroll(scrollState)//스크롤
             ) {
-                for (i in 1..50)
-                    Text(text = "글씨 $i")
+                items(50) { index ->
+                    Text (text = "글씨 $index")
+                }
             }
 
         }
